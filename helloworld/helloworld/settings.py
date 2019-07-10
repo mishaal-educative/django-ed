@@ -25,8 +25,7 @@ SECRET_KEY = '%!jf3(33rjwog+l5$e-xm+aonh1s@yljlfwb$$whw^a+ilc2n)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ os.environ['ALLOWED_HOSTS']]
-
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
 
 # Application definition
 
@@ -36,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +46,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+X_FRAME_OPTIONS = "allow-from https://educative.io"
 
 ROOT_URLCONF = 'helloworld.helloworld.urls'
 
